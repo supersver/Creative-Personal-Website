@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f7f4ea;
+  --ink: #111111;
+  --lime: #d7ff44;
+  --orange: #ff6b4a;
+  --cyan: #7ae7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--lime);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.brand-stamp {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 2px solid var(--ink);
+  background: var(--lime);
+  box-shadow: 5px 5px 0 var(--ink);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.nav-link {
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.hero-title,
+.section-title {
+  letter-spacing: 0;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--ink);
+  padding: 0.55rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-kicker-dark {
+  border-color: var(--paper);
+  color: var(--lime);
+}
+
+.section-title {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.cursor-box {
+  pointer-events: none;
+  position: fixed;
+  z-index: 60;
+  display: none;
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--lime);
+  background: transparent;
+  mix-blend-mode: difference;
+}
+
+.poster-panel {
+  will-change: transform;
+}
+
+.poster-grid {
+  background-image:
+    linear-gradient(var(--ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ink) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.18;
+}
+
+.sticker {
+  box-shadow: 6px 6px 0 var(--ink);
+  will-change: transform;
+}
+
+.magnetic-link {
+  will-change: transform;
+}
+
+.ticker-track {
+  display: inline-flex;
+  min-width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.tilt-card {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.34) 45%,
+      transparent 60%
+    ),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.08) 1px, transparent 1px);
+  background-position:
+    var(--mx) var(--my),
+    0 0;
+  background-size:
+    180px 180px,
+    18px 18px;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.tilt-card:hover::before {
+  opacity: 1;
+}
+
+.process-track {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  scroll-snap-type: x mandatory;
+}
+
+.process-step {
+  min-height: 260px;
+  scroll-snap-align: start;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  padding: 1.25rem;
+  box-shadow: 7px 7px 0 var(--ink);
+}
+
+.contact-marquee {
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  width: max-content;
+  color: rgba(17, 17, 17, 0.06);
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 0.8;
+  text-transform: uppercase;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 6rem;
+  }
+
+  .cursor-box {
+    display: block;
+  }
+}
+
+@media (max-width: 760px) {
+  .process-track {
+    grid-template-columns: repeat(5, minmax(76vw, 1fr));
+  }
+
+  .contact-marquee {
+    font-size: 4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+
+  .cursor-box {
+    display: none;
+  }
+}
