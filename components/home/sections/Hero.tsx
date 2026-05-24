@@ -1,7 +1,13 @@
 "use client";
 
 import { ArrowUpRight, Mail, Radio, Zap } from "lucide-react";
-import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "motion/react";
 import type { Variants } from "motion/react";
 import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
@@ -56,9 +62,20 @@ export function Hero() {
         className="relative z-20 mx-auto flex max-w-7xl items-center justify-between gap-3"
         initial={reduceMotion ? false : { opacity: 0, y: -18 }}
         animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 160, damping: 22, delay: 0.08 }}
+        transition={{
+          type: "spring",
+          stiffness: 160,
+          damping: 22,
+          delay: 0.08,
+        }}
       >
-        <motion.a href="#top" className="brand-stamp" aria-label="Manish home" whileHover={{ rotate: -4, y: -2 }} whileTap={{ scale: 0.94 }}>
+        <motion.a
+          href="#top"
+          className="brand-stamp"
+          aria-label="Manish home"
+          whileHover={{ rotate: -4, y: -2 }}
+          whileTap={{ scale: 0.94 }}
+        >
           M
         </motion.a>
         <nav
@@ -66,13 +83,19 @@ export function Hero() {
           className="hidden items-center gap-2 md:flex"
         >
           {["work", "story", "process", "contact"].map((item) => (
-            <motion.a key={item} href={`#${item}`} className="nav-link" whileHover={{ y: -2 }} whileTap={{ scale: 0.96 }}>
+            <motion.a
+              key={item}
+              href={`#${item}`}
+              className="nav-link"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.96 }}
+            >
               {item}
             </motion.a>
           ))}
         </nav>
         <MagneticLink
-          href="mailto:hello@manishjangir.online"
+          href="https://manishjangir.online/contact"
           icon={Mail}
           className="text-[#f7f4ea]"
         >
@@ -103,11 +126,17 @@ export function Hero() {
           >
             Manish
           </motion.h1>
-          <motion.p variants={heroItem} className="mt-5 max-w-2xl text-lg font-semibold leading-snug sm:text-xl md:text-2xl">
+          <motion.p
+            variants={heroItem}
+            className="mt-5 max-w-2xl text-lg font-semibold leading-snug sm:text-xl md:text-2xl"
+          >
             Creative developer crafting expressive websites, motion-led
             interfaces, and digital identities that feel alive.
           </motion.p>
-          <motion.div variants={heroItem} className="mt-7 flex flex-wrap items-center gap-3">
+          <motion.div
+            variants={heroItem}
+            className="mt-7 flex flex-wrap items-center gap-3"
+          >
             <MagneticLink
               href="#work"
               icon={ArrowUpRight}
@@ -129,20 +158,37 @@ export function Hero() {
           className="relative min-h-[420px] md:min-h-[560px]"
           initial={reduceMotion ? false : { opacity: 0, y: 42, rotate: 2 }}
           animate={reduceMotion ? undefined : { opacity: 1, y: 0, rotate: 0 }}
-          transition={{ type: "spring", stiffness: 110, damping: 18, delay: 0.28 }}
+          transition={{
+            type: "spring",
+            stiffness: 110,
+            damping: 18,
+            delay: 0.28,
+          }}
           style={{ y: reduceMotion ? undefined : posterY }}
         >
           <PortraitPoster />
           <Sticker className="left-0 top-2 bg-[#7ae7ff]" angle={-5}>
             frontend
           </Sticker>
-          <Sticker className="right-2 top-20 bg-[#d7ff44]" angle={7} delay={-1.4}>
+          <Sticker
+            className="right-2 top-20 bg-[#d7ff44]"
+            angle={7}
+            delay={-1.4}
+          >
             motion
           </Sticker>
-          <Sticker className="bottom-24 left-4 bg-[#ff6b4a]" angle={6} delay={-2.6}>
+          <Sticker
+            className="bottom-24 left-4 bg-[#ff6b4a]"
+            angle={6}
+            delay={-2.6}
+          >
             ux logic
           </Sticker>
-          <Sticker className="bottom-8 right-0 bg-[#f7f4ea]" angle={-4} delay={-3.2}>
+          <Sticker
+            className="bottom-8 right-0 bg-[#f7f4ea]"
+            angle={-4}
+            delay={-3.2}
+          >
             clean code
           </Sticker>
         </motion.div>

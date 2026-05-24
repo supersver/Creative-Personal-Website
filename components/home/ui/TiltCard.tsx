@@ -97,7 +97,7 @@ export function TiltCard({
       </p>
       <a
         href="#contact"
-        className="mt-8 inline-flex items-center gap-2 border border-[#111111] bg-[#111111] px-4 py-3 text-sm font-black uppercase text-[#f7f4ea]"
+        className="mt-8 inline-flex items-center gap-2 border border-[#111111] px-4 py-3 text-sm font-black uppercase text-[#f7f4ea]"
       >
         discuss this <ArrowUpRight className="h-4 w-4" />
       </a>

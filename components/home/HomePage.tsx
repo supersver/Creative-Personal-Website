@@ -1,6 +1,12 @@
 "use client";
 
-import { motion, MotionConfig, useMotionValue, useScroll, useSpring } from "motion/react";
+import {
+  motion,
+  MotionConfig,
+  useMotionValue,
+  useScroll,
+  useSpring,
+} from "motion/react";
 import type { PointerEvent } from "react";
 import { Contact } from "./sections/Contact";
 import { Experience } from "./sections/Experience";
@@ -28,13 +34,20 @@ export function HomePage() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="relative isolate overflow-hidden bg-[#f7f4ea] text-[#111111]" onPointerMove={handlePointerMove}>
+      <main
+        className="relative isolate overflow-hidden bg-[#f7f4ea] text-[#111111]"
+        onPointerMove={handlePointerMove}
+      >
         <motion.div
           aria-hidden="true"
-          className="fixed left-0 top-0 z-50 h-[5px] w-full origin-left bg-[#111111]"
+          className="fixed left-0 top-0 z-50 h-1.25 w-full origin-left bg-[#06bcee]"
           style={{ scaleX: progressScale }}
         />
-        <motion.div aria-hidden="true" className="cursor-box" style={{ x: cursorSpringX, y: cursorSpringY }} />
+        <motion.div
+          aria-hidden="true"
+          className="cursor-box"
+          style={{ x: cursorSpringX, y: cursorSpringY }}
+        />
 
         <Hero />
         <Ticker />

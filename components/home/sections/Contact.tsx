@@ -27,7 +27,9 @@ export function Contact() {
         </Reveal>
         <div className="grid gap-8 lg:grid-cols-[1fr_0.65fr] lg:items-end">
           <Reveal delay={0.08}>
-            <h2 className="section-title max-w-4xl">Let's build something that people remember.</h2>
+            <h2 className="section-title max-w-4xl">
+              Let's build something that people remember.
+            </h2>
           </Reveal>
           <Reveal delay={0.16}>
             <p className="text-lg font-semibold leading-relaxed">
@@ -37,7 +39,7 @@ export function Contact() {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <MagneticLink
-                href="mailto:hello@manish.dev"
+                href="https://manishjangir.online/contact"
                 icon={Mail}
                 className="text-[#f7f4ea]"
               >
