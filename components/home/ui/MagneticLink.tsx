@@ -1,6 +1,12 @@
 "use client";
 
-import { motion, useMotionValue, useReducedMotion, useSpring } from "motion/react";
+import clsx from "clsx";
+import {
+  motion,
+  useMotionValue,
+  useReducedMotion,
+  useSpring,
+} from "motion/react";
 import type { ComponentType, MouseEvent, ReactNode } from "react";
 
 type IconComponent = ComponentType<{
@@ -43,12 +49,23 @@ export function MagneticLink({
   return (
     <motion.a
       href={href}
-      className={`magnetic-link inline-flex min-h-12 items-center gap-2 border-2 border-[#111111] bg-[#111111] px-5 py-3 text-sm font-black uppercase shadow-[5px_5px_0_#111111] ${className}`}
+      className={clsx(
+        `magnetic-link inline-flex min-h-12 items-center gap-2 border-2 border-[#111111] px-5 py-3 text-sm font-black uppercase shadow-[5px_5px_0_#111111] `,
+        className,
+      )}
       style={{ x: springX, y: springY }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      whileHover={reduceMotion ? undefined : { scale: 1.03, boxShadow: "8px 8px 0 #111111" }}
-      whileTap={reduceMotion ? undefined : { scale: 0.96, boxShadow: "3px 3px 0 #111111" }}
+      whileHover={
+        reduceMotion
+          ? undefined
+          : { scale: 1.03, boxShadow: "8px 8px 0 #111111" }
+      }
+      whileTap={
+        reduceMotion
+          ? undefined
+          : { scale: 0.96, boxShadow: "3px 3px 0 #111111" }
+      }
       transition={{ type: "spring", stiffness: 460, damping: 24 }}
     >
       <Icon className="h-4 w-4" strokeWidth={2.8} />
