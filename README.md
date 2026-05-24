@@ -1,8 +1,9 @@
-# Creative Personal Website
+# ✨ Creative Personal Website
 
-A kinetic personal portfolio website, built with Next.js, Tailwind CSS, and Motion for React. The design direction is expressive and editorial: bold typography, blocky visual language, scroll-aware movement, magnetic links, animated cards, and a playful hero composition.
+A kinetic personal portfolio website built with **Next.js**, **Tailwind CSS**, and **Motion for React**.  
+The design direction is expressive and editorial: bold typography, blocky visual language, scroll-aware movement, magnetic links, animated cards, and a playful hero composition. 🚀
 
-## Tech Stack
+## 🛠 Tech Stack
 
 - Next.js
 - React
@@ -11,7 +12,7 @@ A kinetic personal portfolio website, built with Next.js, Tailwind CSS, and Moti
 - Motion for React
 - Lucide React icons
 
-## Project Structure
+## 📁 Project Structure
 
 - `app/page.tsx` composes the homepage.
 - `app/layout.tsx` defines metadata and the root document shell.
@@ -28,9 +29,9 @@ A kinetic personal portfolio website, built with Next.js, Tailwind CSS, and Moti
   - `MagneticLink.tsx`
   - `Reveal.tsx`
 
-## Animation Details
+## 🎬 Animation Details
 
-The site uses Motion for React for the main interaction and animation layer:
+The site uses Motion for React as the main interaction and animation layer:
 
 - Spring-based scroll progress indicator
 - Cursor-following motion value
@@ -42,40 +43,12 @@ The site uses Motion for React for the main interaction and animation layer:
 - Animated ticker and contact marquee
 - Floating hero poster and stickers
 
-CSS is used for base styling, layout, colors, typography, and decorative visual effects.
+CSS is used for base styling, layout, colors, typography, and decorative visual effects. 🎨
 
-## Getting Started
+## 🚀 Getting Started
 
 Install dependencies:
 
 ```bash
 npm install
 ```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Open:
-
-```text
-http://localhost:3000
-```
-
-Run TypeScript checks:
-
-```bash
-npm run typecheck
-```
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Notes
-
-The content currently uses portfolio-ready placeholder copy. Replace the sample project descriptions, contact links, and biography text with Manish's real work, links, and story.
