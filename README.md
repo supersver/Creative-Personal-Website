@@ -25,9 +25,11 @@ The design direction is expressive and editorial: bold typography, blocky visual
   - `Experience.tsx`
   - `Workflow.tsx`
   - `Contact.tsx`
+- `components/home/types.ts` defines TypeScript types for projects.
 - `components/home/ui/` contains shared UI and animation helpers:
   - `MagneticLink.tsx`
   - `Reveal.tsx`
+  - `TiltCard.tsx`
 
 ## 🎬 Animation Details
 
@@ -51,4 +53,10 @@ Install dependencies:
 
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
 ```
